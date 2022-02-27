@@ -1,0 +1,11 @@
+def freq_word(s):
+    res = ""
+    ele = list(set(s))
+    d = {i : s.count(i) for i in ele}
+    
+    di = sorted(d.items(), key = lambda  x: x[1])
+    for key, value in di:
+        res += " " + str(value) +" = " + str(key)
+    return res[::-1]
+
+print(freq_word("imssisspi"))
